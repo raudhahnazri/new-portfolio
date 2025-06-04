@@ -117,7 +117,7 @@ const Projects = ({ id }) => {
             >
               <ProjectImageContainer>
                 {/* This would be your actual project image */}
-                <ProjectImagePlaceholder />
+                <ProjectImage src={`${import.meta.env.BASE_URL}images/${project.image}`} alt={project.title}  />
                 <ProjectOverlay>
                   <ProjectLinks>
                     <ProjectLink href={project.demoLink} target="_blank" rel="noopener noreferrer">
@@ -246,6 +246,14 @@ const ProjectImageContainer = styled.div`
 `;
 
 const ProjectImagePlaceholder = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  background-image: linear-gradient(45deg, #444 25%, transparent 25%, transparent 50%, #444 50%, #444 75%, transparent 75%, transparent);
+  background-size: 20px 20px;
+`;
+
+const ProjectImage = styled.img`
   width: 100%;
   height: 100%;
   background-color: #333;
