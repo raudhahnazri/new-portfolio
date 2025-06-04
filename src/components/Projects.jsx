@@ -18,9 +18,9 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Code Tutor - Online Tutoring Booking Platform',
+    title: 'Code Tutors - Online Tutoring Booking Platform',
     category: 'Full Stack',
-    image: 'codetutors.jpg',
+    image: 'codetutors.png',
     description:'A web application connecting tutors and students through an intelligent booking system. The platform matches users based on availability and expertise, features integrated payment processing, and provides an intuitive interface for seamless scheduling and transactions.',
     technologies: ['Django', 'Html'],
     demoLink: 'https://generated-motif-444023-b9.nw.r.appspot.com',
@@ -34,6 +34,9 @@ const Projects = ({ id }) => {
   // Filter categories
   const categories = ['All', 'Frontend', 'Backend', 'Full Stack', 'UI/UX'];
   const [activeCategory, setActiveCategory] = useState('All');
+
+  console.log('Active:', activeCategory);
+  console.log('Projects:', projects.map(p => p.category));
 
   // Filter projects based on active category
   const filteredProjects = activeCategory === 'All' 
