@@ -118,7 +118,7 @@ const Projects = ({ id }) => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible" // start in hidden until its viewed while scrolling
-          viewport={{ once: false }} // but only once so animation never runs again
+          viewport={{ once: true }} // but only once so animation never runs again
         >
           {filteredProjects.map((project) => { 
             console.log("Rendering project:", project.title);
