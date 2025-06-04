@@ -41,7 +41,13 @@ const Projects = ({ id }) => {
   // Filter projects based on active category
   const filteredProjects = activeCategory === 'All' 
     ? projects 
-    : projects.filter(project => project.category === activeCategory);
+    : projects.filter(project => {
+      const projectCategory = project.category.trim().toLowerCase();
+      const active = activeCategory.trim().toLowerCase();
+      console.log(`Comparing "${projectCategory}" with "${active}"`);
+      return projectCategory === active;
+    });
+    
 
   // Animation variants
   const containerVariants = {
