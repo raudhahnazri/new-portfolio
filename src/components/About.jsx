@@ -72,8 +72,8 @@ const About = ({ id }) => {
               viewport={{ once: true }}
             >
               <InfoItem>
-                <InfoLabel>Age :</InfoLabel>
-                <InfoValue>23</InfoValue>
+                <InfoLabel>School :</InfoLabel>
+                <InfoValue>King's College London</InfoValue>
               </InfoItem>
             </motion.div>
             

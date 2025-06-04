@@ -16,7 +16,7 @@ const Avatar = ({id}) => {
                     {/* Framer Motion (using an animation library for react)  */}
                     <motion.div initial={{opacity: 0, y: 20}} animate={{opacity:1, y: 0}} transition={{duration: 0.5}}>
                         {/* motion: fade-in and slide-up */}
-                        <AvatarPageTitle>Hi, I'm Web Developer</AvatarPageTitle>
+                        <AvatarPageTitle>Hi, I'm an aspiring Web Developer</AvatarPageTitle>
                     </motion.div>
 
                     <motion.div initial={{opacity: 0, y: 20}} animate={{opacity:1, y: 0}} transition={{duration: 0.5, delay: 0.2}}>
