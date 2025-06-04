@@ -116,8 +116,8 @@ const Projects = ({ id }) => {
         <ProjectsGrid
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          whileInView="visible" // start in hidden until its viewed while scrolling
+          // viewport={{ once: true }} // but only once so animation never runs again
         >
           {filteredProjects.map((project) => (
             <ProjectCard
