@@ -119,37 +119,40 @@ const Projects = ({ id }) => {
           whileInView="visible" // start in hidden until its viewed while scrolling
           // viewport={{ once: true }} // but only once so animation never runs again
         >
-          {filteredProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              variants={itemVariants}
-            >
-              <ProjectImageContainer>
-                {/* This would be your actual project image */}
-                <ProjectImage src={`${import.meta.env.BASE_URL}images/${project.image}`} alt={project.title}  />
-                <ProjectOverlay>
-                  <ProjectLinks>
-                    <ProjectLink href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                      <FaExternalLinkAlt />
-                    </ProjectLink>
-                    <ProjectLink href={project.codeLink} target="_blank" rel="noopener noreferrer">
-                      <FaGithub />
-                    </ProjectLink>
-                  </ProjectLinks>
-                </ProjectOverlay>
-              </ProjectImageContainer>
-              <ProjectInfo>
-                <ProjectCategory>{project.category}</ProjectCategory>
-                <ProjectTitle>{project.title}</ProjectTitle>
-                <ProjectDescription>{project.description}</ProjectDescription>
-                <ProjectTechnologies>
-                  {project.technologies.map((tech, index) => (
-                    <TechBadge key={index}>{tech}</TechBadge>
-                  ))}
-                </ProjectTechnologies>
-              </ProjectInfo>
-            </ProjectCard>
-          ))}
+          {filteredProjects.map((project) => { 
+            console.log("Rendering project:", project.title);
+            return(
+              <ProjectCard
+                key={project.id}
+                variants={itemVariants}
+              >
+                <ProjectImageContainer>
+                  {/* This would be your actual project image */}
+                  <ProjectImage src={`${import.meta.env.BASE_URL}images/${project.image}`} alt={project.title}  />
+                  <ProjectOverlay>
+                    <ProjectLinks>
+                      <ProjectLink href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                        <FaExternalLinkAlt />
+                      </ProjectLink>
+                      <ProjectLink href={project.codeLink} target="_blank" rel="noopener noreferrer">
+                        <FaGithub />
+                      </ProjectLink>
+                    </ProjectLinks>
+                  </ProjectOverlay>
+                </ProjectImageContainer>
+                <ProjectInfo>
+                  <ProjectCategory>{project.category}</ProjectCategory>
+                  <ProjectTitle>{project.title}</ProjectTitle>
+                  <ProjectDescription>{project.description}</ProjectDescription>
+                  <ProjectTechnologies>
+                    {project.technologies.map((tech, index) => (
+                      <TechBadge key={index}>{tech}</TechBadge>
+                    ))}
+                  </ProjectTechnologies>
+                </ProjectInfo>
+              </ProjectCard>
+            );
+          })}
         </ProjectsGrid>
       </ProjectsContent>
     </ProjectsContainer>
