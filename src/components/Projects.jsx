@@ -114,6 +114,7 @@ const Projects = ({ id }) => {
         </FilterContainer>
 
         <ProjectsGrid
+          key={activeCategory}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible" // start in hidden until its viewed while scrolling
@@ -153,6 +154,11 @@ const Projects = ({ id }) => {
               </ProjectCard>
             );
           })}
+
+          {filteredProjects.length === 0 && (
+            <p style={{ color: "#ADADAD", textAlign: "center" }}>No projects found in this category.</p>
+          )}
+
         </ProjectsGrid>
       </ProjectsContent>
     </ProjectsContainer>
