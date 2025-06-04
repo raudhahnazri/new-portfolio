@@ -48,7 +48,11 @@ const About = ({ id }) => {
             viewport={{ once: true }}
           >
             <AboutDescription>
-             I'm a computer science student with a passion for creativity and problem-solving. It all started when I stumbled upon the Scratch app as a kid. The colorful blocks and playful interface sparked my curiosity and introduced me to the world of coding. Since then, I've been learning to build complete digital solutions, from responsive front-ends with HTML, CSS, JavaScript, and React to robust back-ends using Python and Django. I aspire to become a full-stack developer and UI/UX designer, creating web applications that are both beautiful, user-friendly and functional.
+             I'm a computer science student with a passion for creativity and problem-solving. 
+             It all started when I stumbled upon the Scratch app as a kid. The colorful blocks and playful interface sparked my curiosity and introduced me to the world of coding. 
+             Since then, I've been learning to build complete digital solutions, from responsive front-ends with HTML, CSS, JavaScript, and React to robust back-ends using Python and Django. 
+             I aspire to become a full-stack developer and UI/UX designer, creating web applications that are both beautiful, user-friendly and functional.
+             I'm currently seeking a software engineering internship where I can apply my skills, learn from experienced developers, and contribute to meaningful projects.
             </AboutDescription>
           </motion.div>
           
@@ -65,7 +69,7 @@ const About = ({ id }) => {
               </InfoItem>
             </motion.div>
             
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
@@ -75,7 +79,7 @@ const About = ({ id }) => {
                 <InfoLabel>School :</InfoLabel>
                 <InfoValue>King's College London</InfoValue>
               </InfoItem>
-            </motion.div>
+            </motion.div> */}
             
             <motion.div
               initial={{ opacity: 0, y: 30 }}
